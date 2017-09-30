@@ -1,0 +1,2 @@
+# idleCapital
+First idle game.
