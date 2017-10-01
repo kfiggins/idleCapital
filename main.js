@@ -1,3 +1,6 @@
+// NOTES - Idle Dronez
+// 1. Gather ore, drones have carring capacity, battery, speed, finding etc for upgrades.
+// 
 
 var value = 0;
 var workers = 0;
