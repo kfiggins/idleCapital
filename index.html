@@ -1,15 +1,28 @@
 <html>
     <head>
-        <title>Idle Capital</title>
+        <title>Idle Dronez</title>
     </head>
     <body>
-        <h1>Idle Capital</h1>
-
+        <h1>Idle Dronez</h1>
+        <p>Gems:</p>
         <div id="money">0</div>
         <br>
-        <button onclick="addOne()">Add $1</button>
+        <p>Carbon:</p>
+        <div id="carbon">0</div>
+        <br>
+        <p>Plastics:</p>
+        <div id="plastics">0</div>
+        <br>
+        <p>Electronics:</p>
+        <div id="electronics">0</div>
+        <br>
+        <button onclick="scavenge()">Scavenge</button>
         <br><br>
-        <button onclick="addWorker()">Buy Worker for $50</button>
+        <button id="buildDrone" style="display: none" onclick="buildDrone()">Build Drone</button>
+        <div id="droneBuildProgress" style="display: none">0</div>
+        <div id="numberOfDrones" style="display: none">0</div>
+        <br><br>
+        <button id="addWorker" style="display: none" onclick="addWorker()">Buy Worker for $50</button>
 
 
 
@@ -20,5 +33,7 @@
         crossorigin="anonymous"></script>
 
         <script src="main.js"></script>
+        <script src="oneTimeUnlocks.js"></script>
+        <script src="actions.js"></script>
     </body>
 </html>

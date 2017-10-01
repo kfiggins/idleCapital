@@ -6,33 +6,43 @@
 // 5. You can use money to buy workers that will build the drones for you.
 // 
 
-var value = 0;
+var gems = 49;
 var workers = 0;
-function addOne(){
-    value++;
-    $("#money").text(value);
-}
-
-function addWorker(){
-    if(value < 50){
-        console.log("no");
-        return;
-    }
-    workers++;
-    value = value - 50;
-    $("#money").text(value);
-}
+var electronics = 10;
+var carbon = 20;
+var plastics = 20;
+var droneBuildProgress = 0;
+var drones = 0;
 
 function update(progress) {
     // Update the state of the world for the elapsed time since last render
     if(workers > 0){
-        value += workers;
+        gems += workers;
     }
-    console.log(value);
+
+    if(drones > 0){
+        for(i = 0;i < drones; i++){
+            scavenge();
+        }
+        // drones.forEach(
+        //     scavenge()
+        // )
+    }
+
+    if(droneBuildProgress >= 100){
+        droneBuildProgress = 0;
+        drones++;
+    }
   }
   
 function draw() {
-    $("#money").text(value);
+    $("#money").text(gems);
+    $("#carbon").text(carbon);
+    $("#plastics").text(plastics);
+    $("#electronics").text(electronics);
+    $("#droneBuildProgress").text(droneBuildProgress +"%");
+    $("#numberOfDrones").text(drones + " drone(s).");
+    unlockDroneBuild();
   }
 
 var framesPerSecond = 1;
