@@ -1,5 +1,9 @@
 // NOTES - Idle Dronez
 // 1. Gather ore, drones have carring capacity, battery, speed, finding etc for upgrades.
+// 2. Electronics, Carbon, Plastics, Money element, etc.
+// 3. Then you have to build your first drone.
+// 4. Drones will collect those same things.
+// 5. You can use money to buy workers that will build the drones for you.
 // 
 
 var value = 0;
